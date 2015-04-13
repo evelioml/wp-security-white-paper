@@ -106,7 +106,7 @@
 <p>El sistema de control de acceso y autenticaci&oacute;n interno de WordPress proteger&aacute; contra intentos de dirigir a los usuarios destinos no deseados o redirecciones autom&aacute;ticas. Esta funcionalidad est&aacute; tambi&eacute;n disponible a desarrolladores de plugin mediante una API, <code>wp_safe_redirect()</code><sup id="ref16"><a href="#footnote16">16</a></sup>.</p>
 <h3>Riesgos de seguridad adicionales y relaciones</h3>
 <h4>Ataques de procesado XXE (XML Entidad eXterna)</h4>
-<p>Cuando se procesa XML, WordPress deshabilita la carga de entidades XML personalizadas para prevenir ambos ataques de Entidad Externa y Expansi&oacute;n de Entidad. M&aacutes all&aacute; de la funcionalidad del core de PHP, WordPress no proporciona seguridad adicional mediante una API de procesamiento de XML para los autores de plugins.</p>
+<p>Cuando se procesa XML, WordPress deshabilita la carga de entidades XML personalizadas para prevenir ambos ataques de Entidad Externa y Expansi&oacute;n de Entidad. M&aacute;s all&aacute; de la funcionalidad del core de PHP, WordPress no proporciona seguridad adicional mediante una API de procesamiento de XML para los autores de plugins.</p>
 <h4>Ataques SSRF (Server Side Request Forgery) (Solicitud falsa del lado del servidor)</h4>
 <p>La solicitudes HTTP iniciadas por WordPress son filtradas para prevenir acceso a las IPs privadas y de bucle o propias. Adem&aacute;s, el acceso se permite solo a ciertos puertos standar de HTTP.</p>
 <h2>Seguridad de WordPress en Plugin y Temas</h2>
@@ -119,7 +119,7 @@
 
 <p>Hay aproximadamente m&aacute;s de 30.000 plugins y 2.000 temas listados en el sitio WordPress.org. Estos temas y plugins son enviados para su incorporaci&oacute;n y son manualmente revisados por voluntarios antes de hacerlos disponibles en el repositorio.</p>
 
-<p>La inclusi&oacute;n de plugins y temas en el repositorio no es una garant&iacute;a de que est&eacute;n libres de vulnerabilidades de seguridad. Se proporcionan gu&iacute;as de consulta para autores de plugin antes de su env&iacuteo para inclusi&oacute;n en el repositorio<sup id="ref17"><a href="#footnote17">17</a></sup>, y se proporciona extensa documentaci&oacute;n sobre como hacer el desarrollo de temas de WordPress<sup id="ref18"><a href="#footnote18">18</a></sup> en el sitio WordPress.org</p>
+<p>La inclusi&oacute;n de plugins y temas en el repositorio no es una garant&iacute;a de que est&eacute;n libres de vulnerabilidades de seguridad. Se proporcionan gu&iacute;as de consulta para autores de plugin antes de su env&iacute;o para inclusi&oacute;n en el repositorio<sup id="ref17"><a href="#footnote17">17</a></sup>, y se proporciona extensa documentaci&oacute;n sobre como hacer el desarrollo de temas de WordPress<sup id="ref18"><a href="#footnote18">18</a></sup> en el sitio WordPress.org</p>
 
 <p>Cada plugin y tema tiene la capacidad de ser desarrollada continuamente por el propietario del plugin o del tema, y cualquier arreglo posterior o desarrollo de caracter&iacute;sticas puede subirse al repositorio y hacerse disponible a los usuarios que tengan instalado ese plugin o tema con una descripci&oacute;n de ese cambio. Los administradores de los sitios son notificados de los plugins que necesitan ser actualizados mediante el panel de administraci&oacute;n.</p>
 
