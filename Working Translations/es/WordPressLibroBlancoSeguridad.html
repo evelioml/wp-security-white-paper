@@ -101,9 +101,12 @@
 <h4>A9 - Uso de componentes con vulnerabilidades conocidas</h4>
 <p>El equipo principal de WordPress monitoriza de cerca las pocas bibliotecas y marcos de trabajo que integra WordPress con la funcionalidad del n&uacute;cleo. En el pasado el equipo principal ha hecho contribuciones a varios componentes de terceras partes para hacerlas m&aacute;s seguros,  tales como la actualizaci&oacute;n para arreglar una vulnerabilidad de sitio cruzado en TinyMCE en el WordPress 3.5.2<sup id="ref14"><a href="#footnote14">14</a></sup>.</p>
 
+<p>Si es necesario, el equipo principal puede decidir realizar una bifurcaci&oacute;n o reemplazo de componentes cr&iacute;ticos externos, tales como la librer&iacute;a SWFUpload,  cuando fue oficialmente reemplazada por Plupload en la 3.5.2, y una bifurcaci&oacute;n segura de SWFUpload se hizo disponible de manera inmediata por el equipo de seguridad <sup id="ref15"><a href="#footnote15">15</a></sup> para aquellos plugins que continuaban usando SWFUpload.</p>
 <h4>A10 - Redirecciones no validadas y reenv&iacute;os</h4>
+<p>El sistema de control de acceso y autenticaci&oacute;n interno de WordPress proteger&aacute; contra intentos de dirigir a los usuarios destinos no deseados o redirecciones autom&aacute;ticas. Esta funcionalidad est&aacute; tambi&eacute;n disponible a desarrolladores de plugin mediante una API, <code>wp_safe_redirect()</code><sup id="ref16"><a href="#footnote16">16</a></sup>.</p>
 <h3>Riesgos de seguridad adicionales y relaciones</h3>
 <h4>Ataques de procesado XXE (XML Entidad eXterna)</h4>
+<p>Cuando se procesa XML, WordPress deshabilita la carga de entidades XML personalizadas para prevenir ambos ataques de Entidad Externa y Expansi&oacute;n de Entidad. M&aacutes all&aacute; de la funcionalidad del core de PHP, WordPress no proporciona seguridad adicional mediante una API de procesamiento de XML para los autores de plugins.</p>
 <h4>Ataques SSRF (Server Side Request Forgery) (Solicitud falsa del lado del servidor)</h4>
 <p>La solicitudes HTTP iniciadas por WordPress son filtradas para prevenir acceso a las IPs privadas y de bucle o propias. Adem&aacute;s, el acceso se permite solo a ciertos puertos standar de HTTP.</p>
 <h2>Seguridad de WordPress en Plugin y Temas</h2>
@@ -126,6 +129,7 @@
 <h2>El rol del proveedor de alojamiento en la seguridad de WordPress</h2>
 <p>WordPress puede ser instalado en una gran multitud de plataformas. Aunque el n&uacute;cleo de software de WordPress proporciona muchas disposiciones para operar con aplicaciones web seguras, que fueron descritas en el presente documento, la configuraci&oacute;n del sistema operativo y del servidor web en el que est&aacute; alojado es igualmente importante para mantener las aplicaciones WordPress seguras.</p>
 <h3>Una nota sobre la seguridad de WordPress.com y WordPress</h3>
+<p>WordPress.com es la instalaci&oacute;n m&aacute;s grande del mundo, y es propiedad y la gestiona la empresa Automattic, que fue fundada por Matt Mullenweg, el coautor del proyecto WordPress. WordPress.com se ejecuta sobre el n&uacute;cleo de software de WordPress, y tiene sus propios procesos de seguridad, riesgos y soluciones<sup id="ref22"><a href="#footnote22">22</a></sup>. El presente documento se refiere la seguridad cuando la gesti&oacute;n del alojamiento es propia, descargando el software de fuentes abiertas de WordPress disponible en WordPress.org e instalable en cualquier servidor del mundo.</p>
 <h2>Ap&eacute;ndice</h2>
 <h3>Las API del n&uacute;cleo de WordPress</h3>
 <p>La Interfaz de Programaci&oacute;n de Aplicaciones (API) del n&uacute;cleo de WordPress se compone de varias APIs individuales <sup id="ref23"><a href="#footnote23">23</a></sup>, en las que cada una cubre unas funciones que le conciernen y usan un conjunto dado de funcionalidades. Juntas, estas forman la interfaz de proyecto que permite que los plugins y los temas interactuen con, o modifiquen y extiendan la funcionalidad del n&uacute;cleo de WordPress de manera segura.</p>
@@ -138,6 +142,7 @@
 
 <h3>API del sistema de Archivos</h3>
 
+<p>La API del sistema de archivos<sup id="ref25"><a href="#footnote25">25</a></sup>, a&ntilde;adida en WordPress 2.6<sup id="ref26"><a href="#footnote26">26</a></sup>, fue originalmente creada como caracter&iacute;stica propia de WordPress para sus actualizaciones autom&aacute;ticas. La API del sistema de archivos abstrae la funcionalidad que se necesita para leer y escribir ficheros locales del sistema de archivos para que se haga de manera segura, en una variedad de distintos tipos de alojamientos.</p>
 
 <p>Lo hace a trav&eacute;s de la clase <code>WP_Filesystem_Base</code>, y varias subclases que implementan distintas maneras de conectar al sistema de archivos local, dependiendo del soporte de alojamiento individual. Cualquier tema o plugin que necesite escribir ficheros localmente debeber&iacute;a hacerlo usando la familia de clases de WP_Filesystem.</p>
 
