@@ -103,23 +103,23 @@
 
 <p>Si es necesario, el equipo principal puede decidir realizar una versión propia o un reemplazo de componentes cr&iacute;ticos externos, tales como la librer&iacute;a SWFUpload,  cuando fue oficialmente reemplazada por Plupload en la 3.5.2, y una versión propia segura de SWFUpload se hizo disponible de manera inmediata por el equipo de seguridad <sup id="ref15"><a href="#footnote15">15</a></sup> para aquellos plugins que continuaban usando SWFUpload.</p>
 <h4>A10 - Redirecciones no validadas y reenv&iacute;os</h4>
-<p>El sistema de control de acceso y autenticaci&oacute;n interno de WordPress proteger&aacute; contra intentos de dirigir a los usuarios destinos no deseados o redirecciones autom&aacute;ticas. Esta funcionalidad est&aacute; tambi&eacute;n disponible a desarrolladores de plugin mediante una API, <code>wp_safe_redirect()</code><sup id="ref16"><a href="#footnote16">16</a></sup>.</p>
+<p>El sistema de control de acceso y autenticaci&oacute;n interno de WordPress proteger&aacute; a los usuarios contra intentos de dirigirlos a destinos no deseados o redirecciones autom&aacute;ticas. Esta funcionalidad est&aacute; tambi&eacute;n disponible para desarrolladores de plugins mediante una API, <code>wp_safe_redirect()</code><sup id="ref16"><a href="#footnote16">16</a></sup>.</p>
 <h3>Riesgos de seguridad adicionales y relaciones</h3>
-<h4>Ataques de procesado XXE (XML Entidad eXterna)</h4>
-<p>Cuando se procesa XML, WordPress deshabilita la carga de entidades XML personalizadas para prevenir ambos ataques de Entidad Externa y Expansi&oacute;n de Entidad. M&aacute;s all&aacute; de la funcionalidad del core de PHP, WordPress no proporciona seguridad adicional mediante una API de procesamiento de XML para los autores de plugins.</p>
+<h4>Ataques de procesado XXE (XML eXternal Entity)</h4>
+<p>Cuando se procesa XML, WordPress deshabilita la carga de entidades XML personalizadas para prevenir ataques de Entidad Externa y Expansi&oacute;n de Entidad. Aparte de la funcionalidad del core de PHP, WordPress no proporciona ninguna API de seguridad adicional para XML para los autores de plugins.</p>
 <h4>Ataques SSRF (Server Side Request Forgery) (Solicitud falsa del lado del servidor)</h4>
-<p>La solicitudes HTTP iniciadas por WordPress son filtradas para prevenir acceso a las IPs privadas y de bucle o propias. Adem&aacute;s, el acceso se permite solo a ciertos puertos standar de HTTP.</p>
+<p>La solicitudes HTTP iniciadas por WordPress son filtradas para prevenir acceso a las IPs privadas y propias. Adem&aacute;s, el acceso se permite sólo a ciertos puertos estándar de HTTP.</p>
 <h2>Seguridad de WordPress en Plugin y Temas</h2>
 <h3>El Tema por defecto</h3>
-<p>WordPress requiere de un tema que est&eacute; habilitado para presentar contenido visible en la parte p&uacute;blica. El tema por defecto que viene con el n&uacute;cleo de WordPress (en la actualidad "Twenty Fifteen") ha sido revisado exhaustivamente y probado por razones de seguridad por ambos, el equipo de desarrolladores de tema y el equipo de desarrollo principal.</p>
+<p>WordPress requiere de un tema que est&eacute; habilitado para presentar contenido visible en la parte p&uacute;blica. El tema por defecto que viene con el n&uacute;cleo de WordPress (en la actualidad "Twenty Fifteen") ha sido revisado exhaustivamente y probado por razones de seguridad tanto por el equipo de desarrolladores de tema como por el equipo de desarrollo principal.</p>
 
-<p>El tema por defecto puede servir como un punto de partida para desarrollo de un tema personalizado, y los desarrolladores de sitios pueden crear un tema hijo que incluya alguna personalizaci&oacute;n pero en donde la mayor parte de la funcionalidad y la seguridad recaiga sobre el tema por defecto. El tema por defecto puede quitarse f&aacute;cilmente por un administrador si no se necesita.</p>
+<p>El tema por defecto puede servir como punto de partida para el desarrollo de un tema personalizado, y los desarrolladores de sitios pueden crear un tema hijo que incluya alguna personalizaci&oacute;n, pero en donde la mayor parte de la funcionalidad y la seguridad recaiga sobre el tema por defecto. El tema por defecto puede ser eliminado f&aacute;cilmente por un administrador si no se necesita.</p>
 
-<h3>Repositorios de Tema y Plugin en WordPress.org</h3>
+<h3>Repositorios de Temas y Plugins en WordPress.org</h3>
 
-<p>Hay aproximadamente m&aacute;s de 30.000 plugins y 2.000 temas listados en el sitio WordPress.org. Estos temas y plugins son enviados para su incorporaci&oacute;n y son manualmente revisados por voluntarios antes de hacerlos disponibles en el repositorio.</p>
+<p>Hay m&aacute;s de 30.000 plugins y 2.000 temas listados en el sitio WordPress.org. Estos temas y plugins son enviados para su incorporaci&oacute;n y son manualmente revisados por voluntarios antes de hacerlos disponibles en el repositorio.</p>
 
-<p>La inclusi&oacute;n de plugins y temas en el repositorio no es una garant&iacute;a de que est&eacute;n libres de vulnerabilidades de seguridad. Se proporcionan gu&iacute;as de consulta para autores de plugin antes de su env&iacute;o para inclusi&oacute;n en el repositorio<sup id="ref17"><a href="#footnote17">17</a></sup>, y se proporciona extensa documentaci&oacute;n sobre como hacer el desarrollo de temas de WordPress<sup id="ref18"><a href="#footnote18">18</a></sup> en el sitio WordPress.org</p>
+<p>La inclusi&oacute;n de plugins y temas en el repositorio no es una garant&iacute;a de que est&eacute;n libres de vulnerabilidades de seguridad. Se proporcionan gu&iacute;as de consulta para autores de plugin antes de su env&iacute;o para inclusi&oacute;n en el repositorio<sup id="ref17"><a href="#footnote17">17</a></sup>, y se proporciona extensa documentaci&oacute;n sobre cómo desarrollar temas de WordPress<sup id="ref18"><a href="#footnote18">18</a></sup> en el sitio WordPress.org</p>
 
 <p>Cada plugin y tema tiene la capacidad de ser desarrollada continuamente por el propietario del plugin o del tema, y cualquier arreglo posterior o desarrollo de caracter&iacute;sticas puede subirse al repositorio y hacerse disponible a los usuarios que tengan instalado ese plugin o tema con una descripci&oacute;n de ese cambio. Los administradores de los sitios son notificados de los plugins que necesitan ser actualizados mediante el panel de administraci&oacute;n.</p>
 
